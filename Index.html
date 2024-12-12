@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyModal</title>
+  </head>
+  <style>
+    body {
+      margin: 10% auto;
+      text-align: center;
+    }
+    dialog {
+      width: 70%;
+      height: 300px;
+      border: none;
+    }
+
+    dialog::backdrop {
+      background-color: black;
+      opacity: 0.7;
+    }
+
+    button {
+      background-color: dodgerblue;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+
+    button:hover {
+      background-color: rgb(17, 116, 215);
+    }
+  </style>
+  <body>
+    <div>
+      <dialog id="MyModal">
+        <p>Hello world</p>
+        <button onclick="CloseModal()">Close Modal</button>
+      </dialog>
+    </div>
+    <button onclick="OpenModal()">Open Modal</button>
+
+    <script src="index.js"></script>
+  </body>
+</html>
